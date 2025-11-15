@@ -1,0 +1,152 @@
+.legend-container {
+  position: fixed;
+  top: auto;
+  bottom: 175px; /* Above year selector with more clearance */
+  left: auto;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  width: 320px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 999;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.legend-container.collapsed {
+  padding: 10px;
+  width: auto;
+}
+
+.legend-container.collapsed .legend-content {
+  display: none;
+}
+
+.legend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.legend-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.legend-collapse-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #667eea;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.legend-collapse-btn:hover {
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
+.legend-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.legend-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.legend-full-name {
+  font-size: 11px;
+  color: #7f8c8d;
+}
+
+.legend-gradient-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legend-gradient {
+  width: 100%;
+  height: 20px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.legend-label {
+  font-size: 9px;
+  color: #34495e;
+  text-align: center;
+  flex: 1;
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .legend-container {
+    bottom: 140px;
+    right: 10px;
+    width: 280px;
+  }
+
+  .legend-label {
+    font-size: 8px;
+  }
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .legend-container {
+    background: rgba(44, 62, 80, 0.95);
+  }
+
+  .legend-header h3,
+  .legend-name {
+    color: #ecf0f1;
+  }
+
+  .legend-full-name {
+    color: #bdc3c7;
+  }
+
+  .legend-label {
+    color: #ecf0f1;
+  }
+
+  .legend-header {
+    border-bottom-color: #34495e;
+  }
+}

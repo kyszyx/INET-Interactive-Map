@@ -1,0 +1,72 @@
+// Mock data for barangays - Replace with your actual data
+// Temperature in Celsius, Population in numbers
+
+export const barangayData = {
+  2021: {
+    "Karuhatan": { temperature: 32.8, population: 56120 },
+    "Pariancillo Villa": { temperature: 32.1, population: 12580 },
+    "Poblacion": { temperature: 33.5, population: 9140 },
+    "Pulo": { temperature: 32.4, population: 15890 },
+    "Isla": { temperature: 31.8, population: 10050 },
+    "Arkong Bato": { temperature: 33.1, population: 25780 },
+    "Palasan": { temperature: 32.2, population: 19120 },
+    "Mabolo": { temperature: 32.7, population: 22560 },
+    "Bisig": { temperature: 32.0, population: 14620 },
+    "Tagalag": { temperature: 32.9, population: 20240 },
+    "Wawang Pulo": { temperature: 31.7, population: 11480 },
+  },
+  2022: {
+    "Karuhatan": { temperature: 33.1, population: 56890 },
+    "Pariancillo Villa": { temperature: 32.4, population: 12820 },
+    "Poblacion": { temperature: 33.8, population: 9360 },
+    "Pulo": { temperature: 32.7, population: 16140 },
+    "Isla": { temperature: 32.1, population: 10280 },
+    "Arkong Bato": { temperature: 33.4, population: 26240 },
+    "Palasan": { temperature: 32.5, population: 19520 },
+    "Mabolo": { temperature: 33.0, population: 23010 },
+    "Bisig": { temperature: 32.3, population: 14940 },
+    "Tagalag": { temperature: 33.2, population: 20680 },
+    "Wawang Pulo": { temperature: 32.0, population: 11730 },
+  },
+  2023: {
+    "Karuhatan": { temperature: 33.4, population: 57680 },
+    "Pariancillo Villa": { temperature: 32.7, population: 13070 },
+    "Poblacion": { temperature: 34.1, population: 9590 },
+    "Pulo": { temperature: 33.0, population: 16420 },
+    "Isla": { temperature: 32.4, population: 10530 },
+    "Arkong Bato": { temperature: 33.7, population: 26730 },
+    "Palasan": { temperature: 32.8, population: 19940 },
+    "Mabolo": { temperature: 33.3, population: 23480 },
+    "Bisig": { temperature: 32.6, population: 15280 },
+    "Tagalag": { temperature: 33.5, population: 21140 },
+    "Wawang Pulo": { temperature: 32.3, population: 11990 },
+  },
+  2024: {
+    "Karuhatan": { temperature: 33.7, population: 58510 },
+    "Pariancillo Villa": { temperature: 33.0, population: 13340 },
+    "Poblacion": { temperature: 34.4, population: 9830 },
+    "Pulo": { temperature: 33.3, population: 16720 },
+    "Isla": { temperature: 32.7, population: 10800 },
+    "Arkong Bato": { temperature: 34.0, population: 27250 },
+    "Palasan": { temperature: 33.1, population: 20380 },
+    "Mabolo": { temperature: 33.6, population: 23970 },
+    "Bisig": { temperature: 32.9, population: 15640 },
+    "Tagalag": { temperature: 33.8, population: 21630 },
+    "Wawang Pulo": { temperature: 32.6, population: 12270 },
+  },
+  2025: {
+    "Karuhatan": { temperature: 34.0, population: 59380 },
+    "Pariancillo Villa": { temperature: 33.3, population: 13620 },
+    "Poblacion": { temperature: 34.7, population: 10080 },
+    "Pulo": { temperature: 33.6, population: 17030 },
+    "Isla": { temperature: 33.0, population: 11090 },
+    "Arkong Bato": { temperature: 34.3, population: 27800 },
+    "Palasan": { temperature: 33.4, population: 20830 },
+    "Mabolo": { temperature: 33.9, population: 24480 },
+    "Bisig": { temperature: 33.2, population: 16020 },
+    "Tagalag": { temperature: 34.1, population: 22150 },
+    "Wawang Pulo": { temperature: 32.9, population: 12560 },
+  }
+};
+
+export const availableYears = [2020, 2021, 2022, 2024, 2025];
