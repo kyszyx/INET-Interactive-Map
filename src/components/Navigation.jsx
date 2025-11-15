@@ -21,6 +21,12 @@ const Navigation = ({ currentPage, onPageChange, showExportButton, onExportClick
           Info & FAQ
         </button>
         <button
+          className={`nav-link ${currentPage === 'findings' ? 'active' : ''}`}
+          onClick={() => onPageChange('findings')}
+        >
+          Findings
+        </button>
+        <button
           className={`nav-link ${currentPage === 'about' ? 'active' : ''}`}
           onClick={() => onPageChange('about')}
         >

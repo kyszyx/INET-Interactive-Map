@@ -105,7 +105,7 @@ const LandingPage = ({ onDragComplete, dragOffset, setDragOffset, isHidden }) =>
         <p className="inet-subtitle">Identifying Networks of Elevated Temperature</p>
         <div className="drag-hint">
           <span className="drag-arrow">←</span>
-          <span className="drag-text"></span>
+          <span className="drag-text">Slide to the left</span>
         </div>
       </div>
 

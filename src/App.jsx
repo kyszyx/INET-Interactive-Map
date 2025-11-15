@@ -7,13 +7,14 @@ import LayerControl from './components/LayerControl';
 import Navigation from './components/Navigation';
 import AboutPage from './components/AboutPage';
 import InfoFAQPage from './components/InfoFAQPage';
+import FindingsPage from './components/FindingsPage';
 import ExportButton from './components/ExportButton';
 import { loadBarangayLSTData, getPopulationData } from './utils/dataLoader';
 import { getYearClusterData } from './utils/clusterDataLoader';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('landing'); // 'landing', 'map', 'about', 'info'
+  const [currentPage, setCurrentPage] = useState('landing'); // 'landing', 'map', 'about', 'info', 'findings'
   const [showMap, setShowMap] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
   const [selectedYear, setSelectedYear] = useState(2025);
@@ -94,7 +95,7 @@ function App() {
   };
 
   return (
-    <div className={`app-container ${currentPage === 'about' || currentPage === 'info' ? 'scrollable' : ''}`}>
+    <div className={`app-container ${currentPage === 'about' || currentPage === 'info' || currentPage === 'findings' ? 'scrollable' : ''}`}>
       {currentPage !== 'landing' && (
         <Navigation
           currentPage={currentPage}
@@ -145,6 +146,8 @@ function App() {
       {currentPage === 'about' && <AboutPage />}
 
       {currentPage === 'info' && <InfoFAQPage />}
+
+      {currentPage === 'findings' && <FindingsPage />}
     </div>
   );
 }

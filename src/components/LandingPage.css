@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: #E0F2FF;
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
   z-index: 1000;
   cursor: grab;
   user-select: none;
@@ -51,22 +51,24 @@
   bottom: 80px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 20px;
   color: #1e40af;
-  font-size: 16px;
+  font-size: 24px;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
   animation: pulse 2s infinite, fadeIn 2s ease-in;
 }
 
 .drag-arrow {
-  font-size: 32px;
+  font-size: 80px;
+  font-weight: bold;
   animation: slideLeft 1.5s infinite;
 }
 
 .drag-text {
   font-family: 'Arial', sans-serif;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 28px;
 }
 
 /* Thermometer Styles */
@@ -171,7 +173,7 @@
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-10px);
+    transform: translateX(-20px);
   }
 }
 
@@ -197,11 +199,16 @@
   }
 
   .drag-hint {
-    font-size: 14px;
+    font-size: 18px;
+    gap: 15px;
   }
 
   .drag-arrow {
-    font-size: 24px;
+    font-size: 60px;
+  }
+
+  .drag-text {
+    font-size: 20px;
   }
 
   .thermometer-container {
