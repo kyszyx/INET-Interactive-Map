@@ -88,6 +88,10 @@ const FindingsPage = () => {
         lines.forEach(line => {
           const values = line.split(',');
           const year = values[1];
+
+          // Skip 2023 data
+          if (year === '2023') return;
+
           const temp = parseFloat(values[3]);
 
           if (!yearData[year]) {
