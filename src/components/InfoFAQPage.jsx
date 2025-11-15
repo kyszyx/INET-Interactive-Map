@@ -46,7 +46,7 @@ const InfoFAQPage = () => {
                 <h3>Temperature Range</h3>
                 <p>
                   In Valenzuela City, LST typically ranges from 29°C to 55°C, with higher values
-                  indicating heat stress areas that may require intervention. It has been limited to 55°C since data from satellite imagery ranges up to 70°C which is unreal.
+                  indicating heat stress areas that may require intervention. It has been limited to 55°C since data from satellite imagery temperature peaks up to 70-80°C which is considered as noise or unrealistic.
                 </p>
               </div>
             )}
