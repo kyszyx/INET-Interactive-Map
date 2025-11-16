@@ -2,21 +2,21 @@
   "2020": [
     {
       "id": 0,
-      "pixelCount": 57,
-      "avgTemp": 53.08,
-      "minTemp": 49.6,
-      "maxTemp": 56.85,
-      "stdTemp": 2.21,
-      "area": 5.1
+      "pixelCount": 25,
+      "avgTemp": 64.64,
+      "minTemp": 62.06,
+      "maxTemp": 67.89,
+      "stdTemp": 1.42,
+      "area": 2.2
     },
     {
       "id": 1,
-      "pixelCount": 267,
-      "avgTemp": 51.63,
-      "minTemp": 49.59,
-      "maxTemp": 59.24,
-      "stdTemp": 1.9,
-      "area": 24.0
+      "pixelCount": 327,
+      "avgTemp": 51.99,
+      "minTemp": 49.6,
+      "maxTemp": 60.27,
+      "stdTemp": 2.22,
+      "area": 29.4
     },
     {
       "id": 2,
@@ -29,370 +29,73 @@
     },
     {
       "id": 3,
-      "pixelCount": 569,
-      "avgTemp": 51.67,
-      "minTemp": 49.59,
-      "maxTemp": 55.03,
-      "stdTemp": 1.44,
-      "area": 51.2
+      "pixelCount": 7301,
+      "avgTemp": 51.18,
+      "minTemp": 49.6,
+      "maxTemp": 56.65,
+      "stdTemp": 1.25,
+      "area": 657.1
     },
     {
       "id": 4,
-      "pixelCount": 202,
-      "avgTemp": 51.65,
+      "pixelCount": 467,
+      "avgTemp": 50.09,
       "minTemp": 49.6,
-      "maxTemp": 54.82,
-      "stdTemp": 1.48,
-      "area": 18.2
-    },
-    {
-      "id": 5,
-      "pixelCount": 3284,
-      "avgTemp": 51.26,
-      "minTemp": 49.59,
-      "maxTemp": 56.65,
-      "stdTemp": 1.28,
-      "area": 295.6
-    },
-    {
-      "id": 6,
-      "pixelCount": 36,
-      "avgTemp": 51.05,
-      "minTemp": 49.63,
-      "maxTemp": 53.06,
-      "stdTemp": 0.9,
-      "area": 3.2
-    },
-    {
-      "id": 7,
-      "pixelCount": 92,
-      "avgTemp": 50.9,
-      "minTemp": 49.63,
-      "maxTemp": 53.52,
-      "stdTemp": 1.1,
-      "area": 8.3
-    },
-    {
-      "id": 8,
-      "pixelCount": 89,
-      "avgTemp": 50.68,
-      "minTemp": 49.6,
-      "maxTemp": 53.2,
-      "stdTemp": 1.0,
-      "area": 8.0
-    },
-    {
-      "id": 9,
-      "pixelCount": 130,
-      "avgTemp": 51.52,
-      "minTemp": 49.61,
-      "maxTemp": 56.02,
-      "stdTemp": 1.65,
-      "area": 11.7
-    },
-    {
-      "id": 10,
-      "pixelCount": 2325,
-      "avgTemp": 50.98,
-      "minTemp": 49.59,
-      "maxTemp": 55.56,
-      "stdTemp": 1.12,
-      "area": 209.2
-    },
-    {
-      "id": 11,
-      "pixelCount": 150,
-      "avgTemp": 50.72,
-      "minTemp": 49.6,
-      "maxTemp": 52.66,
-      "stdTemp": 0.7,
-      "area": 13.5
-    },
-    {
-      "id": 12,
-      "pixelCount": 12,
-      "avgTemp": 50.23,
-      "minTemp": 49.65,
-      "maxTemp": 50.99,
-      "stdTemp": 0.47,
-      "area": 1.1
-    },
-    {
-      "id": 13,
-      "pixelCount": 50,
-      "avgTemp": 50.79,
-      "minTemp": 49.66,
-      "maxTemp": 52.74,
-      "stdTemp": 0.89,
-      "area": 4.5
-    },
-    {
-      "id": 14,
-      "pixelCount": 33,
-      "avgTemp": 50.39,
-      "minTemp": 49.61,
-      "maxTemp": 51.38,
-      "stdTemp": 0.57,
-      "area": 3.0
-    },
-    {
-      "id": 15,
-      "pixelCount": 44,
-      "avgTemp": 50.02,
-      "minTemp": 49.63,
-      "maxTemp": 50.79,
-      "stdTemp": 0.31,
-      "area": 4.0
-    },
-    {
-      "id": 16,
-      "pixelCount": 158,
-      "avgTemp": 50.85,
-      "minTemp": 49.64,
-      "maxTemp": 52.96,
-      "stdTemp": 0.78,
-      "area": 14.2
-    },
-    {
-      "id": 17,
-      "pixelCount": 150,
-      "avgTemp": 51.19,
-      "minTemp": 49.61,
-      "maxTemp": 54.12,
-      "stdTemp": 1.23,
-      "area": 13.5
-    },
-    {
-      "id": 18,
-      "pixelCount": 21,
-      "avgTemp": 49.74,
-      "minTemp": 49.61,
-      "maxTemp": 49.97,
-      "stdTemp": 0.11,
-      "area": 1.9
-    },
-    {
-      "id": 19,
-      "pixelCount": 17,
-      "avgTemp": 50.29,
-      "minTemp": 49.63,
-      "maxTemp": 51.18,
-      "stdTemp": 0.48,
-      "area": 1.5
-    },
-    {
-      "id": 20,
-      "pixelCount": 385,
-      "avgTemp": 50.1,
-      "minTemp": 49.59,
       "maxTemp": 51.88,
-      "stdTemp": 0.44,
-      "area": 34.6
-    },
-    {
-      "id": 21,
-      "pixelCount": 21,
-      "avgTemp": 49.85,
-      "minTemp": 49.62,
-      "maxTemp": 50.2,
-      "stdTemp": 0.2,
-      "area": 1.9
-    },
-    {
-      "id": 22,
-      "pixelCount": 69,
-      "avgTemp": 50.04,
-      "minTemp": 49.61,
-      "maxTemp": 50.74,
-      "stdTemp": 0.31,
-      "area": 6.2
+      "stdTemp": 0.42,
+      "area": 42.0
     }
   ],
   "2021": [
     {
       "id": 0,
-      "pixelCount": 431,
-      "avgTemp": 51.81,
-      "minTemp": 49.63,
-      "maxTemp": 59.81,
-      "stdTemp": 1.99,
-      "area": 38.8
+      "pixelCount": 26,
+      "avgTemp": 65.44,
+      "minTemp": 49.66,
+      "maxTemp": 68.93,
+      "stdTemp": 3.35,
+      "area": 2.3
     },
     {
       "id": 1,
-      "pixelCount": 96,
-      "avgTemp": 51.49,
-      "minTemp": 49.65,
-      "maxTemp": 55.41,
-      "stdTemp": 1.43,
-      "area": 8.6
+      "pixelCount": 434,
+      "avgTemp": 51.95,
+      "minTemp": 49.64,
+      "maxTemp": 61.22,
+      "stdTemp": 2.23,
+      "area": 39.1
     },
     {
       "id": 2,
-      "pixelCount": 31,
-      "avgTemp": 50.13,
+      "pixelCount": 104,
+      "avgTemp": 51.4,
       "minTemp": 49.65,
-      "maxTemp": 50.65,
-      "stdTemp": 0.29,
-      "area": 2.8
+      "maxTemp": 55.41,
+      "stdTemp": 1.41,
+      "area": 9.4
     },
     {
       "id": 3,
-      "pixelCount": 4825,
-      "avgTemp": 51.34,
-      "minTemp": 49.63,
+      "pixelCount": 7631,
+      "avgTemp": 51.1,
+      "minTemp": 49.64,
       "maxTemp": 58.06,
-      "stdTemp": 1.37,
-      "area": 434.2
-    },
-    {
-      "id": 4,
-      "pixelCount": 17,
-      "avgTemp": 51.07,
-      "minTemp": 49.78,
-      "maxTemp": 52.9,
-      "stdTemp": 0.93,
-      "area": 1.5
-    },
-    {
-      "id": 5,
-      "pixelCount": 40,
-      "avgTemp": 50.79,
-      "minTemp": 49.64,
-      "maxTemp": 52.65,
-      "stdTemp": 0.88,
-      "area": 3.6
-    },
-    {
-      "id": 6,
-      "pixelCount": 13,
-      "avgTemp": 49.94,
-      "minTemp": 49.63,
-      "maxTemp": 50.29,
-      "stdTemp": 0.23,
-      "area": 1.2
-    },
-    {
-      "id": 7,
-      "pixelCount": 10,
-      "avgTemp": 50.08,
-      "minTemp": 49.72,
-      "maxTemp": 50.54,
-      "stdTemp": 0.31,
-      "area": 0.9
-    },
-    {
-      "id": 8,
-      "pixelCount": 1954,
-      "avgTemp": 50.77,
-      "minTemp": 49.63,
-      "maxTemp": 54.62,
-      "stdTemp": 1.0,
-      "area": 175.9
-    },
-    {
-      "id": 9,
-      "pixelCount": 24,
-      "avgTemp": 50.51,
-      "minTemp": 49.65,
-      "maxTemp": 51.52,
-      "stdTemp": 0.59,
-      "area": 2.2
-    },
-    {
-      "id": 10,
-      "pixelCount": 19,
-      "avgTemp": 50.06,
-      "minTemp": 49.64,
-      "maxTemp": 50.39,
-      "stdTemp": 0.2,
-      "area": 1.7
-    },
-    {
-      "id": 11,
-      "pixelCount": 36,
-      "avgTemp": 50.5,
-      "minTemp": 49.65,
-      "maxTemp": 51.42,
-      "stdTemp": 0.55,
-      "area": 3.2
-    },
-    {
-      "id": 12,
-      "pixelCount": 186,
-      "avgTemp": 51.23,
-      "minTemp": 49.66,
-      "maxTemp": 54.39,
-      "stdTemp": 1.27,
-      "area": 16.7
-    },
-    {
-      "id": 13,
-      "pixelCount": 139,
-      "avgTemp": 50.47,
-      "minTemp": 49.65,
-      "maxTemp": 52.72,
-      "stdTemp": 0.7,
-      "area": 12.5
-    },
-    {
-      "id": 14,
-      "pixelCount": 224,
-      "avgTemp": 50.22,
-      "minTemp": 49.64,
-      "maxTemp": 52.07,
-      "stdTemp": 0.5,
-      "area": 20.2
-    },
-    {
-      "id": 15,
-      "pixelCount": 37,
-      "avgTemp": 50.07,
-      "minTemp": 49.64,
-      "maxTemp": 50.76,
-      "stdTemp": 0.27,
-      "area": 3.3
-    },
-    {
-      "id": 16,
-      "pixelCount": 13,
-      "avgTemp": 49.99,
-      "minTemp": 49.66,
-      "maxTemp": 50.44,
-      "stdTemp": 0.28,
-      "area": 1.2
-    },
-    {
-      "id": 17,
-      "pixelCount": 79,
-      "avgTemp": 50.27,
-      "minTemp": 49.65,
-      "maxTemp": 51.47,
-      "stdTemp": 0.43,
-      "area": 7.1
+      "stdTemp": 1.28,
+      "area": 686.8
     }
   ],
   "2022": [
     {
       "id": 0,
-      "pixelCount": 21,
-      "avgTemp": 52.22,
-      "minTemp": 51.61,
-      "maxTemp": 52.74,
-      "stdTemp": 0.36,
-      "area": 1.9
+      "pixelCount": 25,
+      "avgTemp": 66.79,
+      "minTemp": 63.82,
+      "maxTemp": 69.3,
+      "stdTemp": 1.51,
+      "area": 2.2
     },
     {
       "id": 1,
-      "pixelCount": 544,
-      "avgTemp": 53.96,
-      "minTemp": 51.53,
-      "maxTemp": 60.0,
-      "stdTemp": 1.88,
-      "area": 49.0
-    },
-    {
-      "id": 2,
       "pixelCount": 133,
       "avgTemp": 53.69,
       "minTemp": 51.53,
@@ -401,25 +104,16 @@
       "area": 12.0
     },
     {
-      "id": 3,
-      "pixelCount": 27,
-      "avgTemp": 53.48,
-      "minTemp": 51.6,
-      "maxTemp": 56.16,
-      "stdTemp": 1.32,
-      "area": 2.4
-    },
-    {
-      "id": 4,
-      "pixelCount": 5336,
-      "avgTemp": 53.59,
+      "id": 2,
+      "pixelCount": 5972,
+      "avgTemp": 53.67,
       "minTemp": 51.53,
-      "maxTemp": 59.9,
-      "stdTemp": 1.61,
-      "area": 480.2
+      "maxTemp": 64.78,
+      "stdTemp": 1.76,
+      "area": 537.5
     },
     {
-      "id": 5,
+      "id": 3,
       "pixelCount": 31,
       "avgTemp": 53.29,
       "minTemp": 51.65,
@@ -428,324 +122,90 @@
       "area": 2.8
     },
     {
+      "id": 4,
+      "pixelCount": 274,
+      "avgTemp": 53.08,
+      "minTemp": 51.53,
+      "maxTemp": 57.82,
+      "stdTemp": 1.53,
+      "area": 24.7
+    },
+    {
+      "id": 5,
+      "pixelCount": 1216,
+      "avgTemp": 52.7,
+      "minTemp": 51.53,
+      "maxTemp": 57.38,
+      "stdTemp": 1.24,
+      "area": 109.4
+    },
+    {
       "id": 6,
-      "pixelCount": 28,
-      "avgTemp": 52.4,
+      "pixelCount": 32,
+      "avgTemp": 52.41,
       "minTemp": 51.54,
       "maxTemp": 54.11,
-      "stdTemp": 0.68,
-      "area": 2.5
+      "stdTemp": 0.66,
+      "area": 2.9
     },
     {
       "id": 7,
-      "pixelCount": 23,
-      "avgTemp": 51.97,
-      "minTemp": 51.54,
-      "maxTemp": 52.75,
-      "stdTemp": 0.28,
-      "area": 2.1
-    },
-    {
-      "id": 8,
-      "pixelCount": 101,
-      "avgTemp": 54.19,
-      "minTemp": 51.53,
-      "maxTemp": 57.82,
-      "stdTemp": 1.93,
-      "area": 9.1
-    },
-    {
-      "id": 9,
-      "pixelCount": 26,
-      "avgTemp": 52.19,
-      "minTemp": 51.53,
-      "maxTemp": 53.13,
-      "stdTemp": 0.47,
-      "area": 2.3
-    },
-    {
-      "id": 10,
-      "pixelCount": 12,
-      "avgTemp": 52.12,
-      "minTemp": 51.55,
-      "maxTemp": 53.2,
-      "stdTemp": 0.53,
-      "area": 1.1
-    },
-    {
-      "id": 11,
-      "pixelCount": 139,
-      "avgTemp": 52.52,
-      "minTemp": 51.53,
-      "maxTemp": 54.62,
-      "stdTemp": 0.67,
-      "area": 12.5
-    },
-    {
-      "id": 12,
-      "pixelCount": 867,
-      "avgTemp": 52.96,
-      "minTemp": 51.53,
-      "maxTemp": 57.38,
-      "stdTemp": 1.35,
-      "area": 78.0
-    },
-    {
-      "id": 13,
-      "pixelCount": 12,
-      "avgTemp": 51.69,
-      "minTemp": 51.53,
-      "maxTemp": 51.87,
-      "stdTemp": 0.08,
-      "area": 1.1
-    },
-    {
-      "id": 14,
-      "pixelCount": 179,
-      "avgTemp": 52.18,
-      "minTemp": 51.54,
-      "maxTemp": 53.97,
-      "stdTemp": 0.53,
-      "area": 16.1
-    },
-    {
-      "id": 15,
-      "pixelCount": 119,
-      "avgTemp": 51.95,
-      "minTemp": 51.53,
-      "maxTemp": 53.68,
-      "stdTemp": 0.4,
-      "area": 10.7
-    },
-    {
-      "id": 16,
-      "pixelCount": 22,
-      "avgTemp": 51.93,
-      "minTemp": 51.55,
-      "maxTemp": 52.33,
-      "stdTemp": 0.22,
-      "area": 2.0
-    },
-    {
-      "id": 17,
-      "pixelCount": 98,
-      "avgTemp": 52.01,
-      "minTemp": 51.54,
-      "maxTemp": 52.94,
-      "stdTemp": 0.35,
-      "area": 8.8
-    },
-    {
-      "id": 18,
-      "pixelCount": 382,
-      "avgTemp": 52.34,
+      "pixelCount": 486,
+      "avgTemp": 52.26,
       "minTemp": 51.54,
       "maxTemp": 54.04,
-      "stdTemp": 0.64,
-      "area": 34.4
+      "stdTemp": 0.6,
+      "area": 43.7
     }
   ],
   "2024": [
     {
       "id": 0,
-      "pixelCount": 6217,
-      "avgTemp": 51.42,
-      "minTemp": 49.45,
-      "maxTemp": 59.84,
-      "stdTemp": 1.61,
-      "area": 559.5
+      "pixelCount": 6810,
+      "avgTemp": 51.37,
+      "minTemp": 49.46,
+      "maxTemp": 62.59,
+      "stdTemp": 1.62,
+      "area": 612.9
     },
     {
       "id": 1,
-      "pixelCount": 144,
-      "avgTemp": 51.52,
-      "minTemp": 49.49,
-      "maxTemp": 56.08,
-      "stdTemp": 1.51,
-      "area": 13.0
+      "pixelCount": 130,
+      "avgTemp": 51.01,
+      "minTemp": 49.46,
+      "maxTemp": 54.06,
+      "stdTemp": 1.34,
+      "area": 11.7
     },
     {
       "id": 2,
-      "pixelCount": 23,
-      "avgTemp": 50.53,
-      "minTemp": 49.48,
-      "maxTemp": 51.99,
-      "stdTemp": 0.71,
-      "area": 2.1
-    },
-    {
-      "id": 3,
-      "pixelCount": 154,
-      "avgTemp": 50.86,
-      "minTemp": 49.46,
-      "maxTemp": 52.68,
-      "stdTemp": 0.92,
-      "area": 13.9
-    },
-    {
-      "id": 4,
-      "pixelCount": 20,
-      "avgTemp": 50.01,
-      "minTemp": 49.55,
-      "maxTemp": 51.05,
-      "stdTemp": 0.39,
-      "area": 1.8
-    },
-    {
-      "id": 5,
-      "pixelCount": 23,
-      "avgTemp": 50.66,
-      "minTemp": 49.57,
-      "maxTemp": 51.7,
-      "stdTemp": 0.59,
-      "area": 2.1
-    },
-    {
-      "id": 6,
-      "pixelCount": 152,
-      "avgTemp": 50.37,
-      "minTemp": 49.45,
-      "maxTemp": 52.72,
-      "stdTemp": 0.8,
-      "area": 13.7
-    },
-    {
-      "id": 7,
-      "pixelCount": 96,
-      "avgTemp": 50.37,
-      "minTemp": 49.46,
-      "maxTemp": 51.95,
-      "stdTemp": 0.68,
-      "area": 8.6
-    },
-    {
-      "id": 8,
-      "pixelCount": 12,
-      "avgTemp": 49.95,
-      "minTemp": 49.48,
-      "maxTemp": 50.35,
-      "stdTemp": 0.3,
-      "area": 1.1
-    },
-    {
-      "id": 9,
-      "pixelCount": 13,
-      "avgTemp": 49.9,
-      "minTemp": 49.47,
-      "maxTemp": 50.34,
-      "stdTemp": 0.27,
-      "area": 1.2
-    },
-    {
-      "id": 10,
-      "pixelCount": 11,
-      "avgTemp": 49.63,
-      "minTemp": 49.48,
-      "maxTemp": 49.95,
-      "stdTemp": 0.16,
-      "area": 1.0
-    },
-    {
-      "id": 11,
       "pixelCount": 366,
       "avgTemp": 50.48,
-      "minTemp": 49.45,
+      "minTemp": 49.46,
       "maxTemp": 53.41,
       "stdTemp": 0.89,
       "area": 32.9
     },
     {
-      "id": 12,
-      "pixelCount": 13,
-      "avgTemp": 49.86,
-      "minTemp": 49.53,
-      "maxTemp": 50.25,
-      "stdTemp": 0.24,
-      "area": 1.2
-    },
-    {
-      "id": 13,
-      "pixelCount": 18,
-      "avgTemp": 49.84,
-      "minTemp": 49.5,
-      "maxTemp": 50.25,
-      "stdTemp": 0.23,
-      "area": 1.6
-    },
-    {
-      "id": 14,
-      "pixelCount": 180,
-      "avgTemp": 50.27,
-      "minTemp": 49.45,
-      "maxTemp": 52.61,
-      "stdTemp": 0.72,
-      "area": 16.2
-    },
-    {
-      "id": 15,
-      "pixelCount": 36,
-      "avgTemp": 49.97,
-      "minTemp": 49.47,
-      "maxTemp": 50.83,
-      "stdTemp": 0.37,
-      "area": 3.2
-    },
-    {
-      "id": 16,
-      "pixelCount": 39,
-      "avgTemp": 49.97,
+      "id": 3,
+      "pixelCount": 119,
+      "avgTemp": 50.43,
       "minTemp": 49.46,
-      "maxTemp": 51.19,
-      "stdTemp": 0.47,
-      "area": 3.5
+      "maxTemp": 51.95,
+      "stdTemp": 0.67,
+      "area": 10.7
     },
     {
-      "id": 17,
-      "pixelCount": 11,
-      "avgTemp": 49.78,
-      "minTemp": 49.52,
-      "maxTemp": 50.08,
-      "stdTemp": 0.2,
-      "area": 1.0
-    },
-    {
-      "id": 18,
-      "pixelCount": 128,
-      "avgTemp": 51.03,
+      "id": 4,
+      "pixelCount": 151,
+      "avgTemp": 50.37,
       "minTemp": 49.46,
-      "maxTemp": 54.06,
-      "stdTemp": 1.33,
-      "area": 11.5
+      "maxTemp": 52.72,
+      "stdTemp": 0.8,
+      "area": 13.6
     },
     {
-      "id": 19,
-      "pixelCount": 18,
-      "avgTemp": 49.88,
-      "minTemp": 49.5,
-      "maxTemp": 50.46,
-      "stdTemp": 0.31,
-      "area": 1.6
-    },
-    {
-      "id": 20,
-      "pixelCount": 374,
-      "avgTemp": 49.82,
-      "minTemp": 49.45,
-      "maxTemp": 51.97,
-      "stdTemp": 0.38,
-      "area": 33.7
-    },
-    {
-      "id": 21,
-      "pixelCount": 46,
-      "avgTemp": 50.26,
-      "minTemp": 49.52,
-      "maxTemp": 51.25,
-      "stdTemp": 0.42,
-      "area": 4.1
-    },
-    {
-      "id": 22,
+      "id": 5,
       "pixelCount": 40,
       "avgTemp": 50.28,
       "minTemp": 49.48,
@@ -754,162 +214,72 @@
       "area": 3.6
     },
     {
-      "id": 23,
-      "pixelCount": 70,
-      "avgTemp": 50.01,
-      "minTemp": 49.47,
-      "maxTemp": 50.89,
-      "stdTemp": 0.37,
-      "area": 6.3
+      "id": 6,
+      "pixelCount": 46,
+      "avgTemp": 50.26,
+      "minTemp": 49.52,
+      "maxTemp": 51.25,
+      "stdTemp": 0.42,
+      "area": 4.1
+    },
+    {
+      "id": 7,
+      "pixelCount": 451,
+      "avgTemp": 49.86,
+      "minTemp": 49.46,
+      "maxTemp": 51.97,
+      "stdTemp": 0.38,
+      "area": 40.6
     }
   ],
   "2025": [
     {
       "id": 0,
-      "pixelCount": 1509,
-      "avgTemp": 54.7,
-      "minTemp": 52.46,
-      "maxTemp": 59.84,
-      "stdTemp": 1.65,
-      "area": 135.8
+      "pixelCount": 2190,
+      "avgTemp": 54.74,
+      "minTemp": 52.47,
+      "maxTemp": 65.1,
+      "stdTemp": 1.8,
+      "area": 197.1
     },
     {
       "id": 1,
-      "pixelCount": 155,
-      "avgTemp": 54.93,
-      "minTemp": 52.48,
-      "maxTemp": 59.95,
-      "stdTemp": 1.86,
-      "area": 13.9
+      "pixelCount": 3458,
+      "avgTemp": 53.8,
+      "minTemp": 52.47,
+      "maxTemp": 70.4,
+      "stdTemp": 1.56,
+      "area": 311.2
     },
     {
       "id": 2,
-      "pixelCount": 51,
-      "avgTemp": 54.72,
-      "minTemp": 52.5,
-      "maxTemp": 57.25,
-      "stdTemp": 1.29,
-      "area": 4.6
+      "pixelCount": 208,
+      "avgTemp": 53.75,
+      "minTemp": 52.49,
+      "maxTemp": 56.37,
+      "stdTemp": 0.93,
+      "area": 18.7
     },
     {
       "id": 3,
-      "pixelCount": 454,
-      "avgTemp": 54.3,
+      "pixelCount": 852,
+      "avgTemp": 53.73,
       "minTemp": 52.47,
-      "maxTemp": 57.93,
-      "stdTemp": 1.2,
-      "area": 40.9
+      "maxTemp": 57.52,
+      "stdTemp": 1.11,
+      "area": 76.7
     },
     {
       "id": 4,
-      "pixelCount": 820,
-      "avgTemp": 53.76,
-      "minTemp": 52.46,
-      "maxTemp": 57.52,
-      "stdTemp": 1.12,
-      "area": 73.8
+      "pixelCount": 1095,
+      "avgTemp": 53.66,
+      "minTemp": 52.47,
+      "maxTemp": 57.51,
+      "stdTemp": 0.98,
+      "area": 98.5
     },
     {
       "id": 5,
-      "pixelCount": 11,
-      "avgTemp": 53.13,
-      "minTemp": 52.58,
-      "maxTemp": 53.64,
-      "stdTemp": 0.41,
-      "area": 1.0
-    },
-    {
-      "id": 6,
-      "pixelCount": 11,
-      "avgTemp": 52.68,
-      "minTemp": 52.47,
-      "maxTemp": 53.0,
-      "stdTemp": 0.18,
-      "area": 1.0
-    },
-    {
-      "id": 7,
-      "pixelCount": 14,
-      "avgTemp": 52.9,
-      "minTemp": 52.5,
-      "maxTemp": 53.57,
-      "stdTemp": 0.32,
-      "area": 1.3
-    },
-    {
-      "id": 8,
-      "pixelCount": 3309,
-      "avgTemp": 53.72,
-      "minTemp": 52.46,
-      "maxTemp": 58.97,
-      "stdTemp": 1.12,
-      "area": 297.8
-    },
-    {
-      "id": 9,
-      "pixelCount": 1055,
-      "avgTemp": 53.68,
-      "minTemp": 52.46,
-      "maxTemp": 57.51,
-      "stdTemp": 0.99,
-      "area": 95.0
-    },
-    {
-      "id": 10,
-      "pixelCount": 92,
-      "avgTemp": 53.6,
-      "minTemp": 52.46,
-      "maxTemp": 55.28,
-      "stdTemp": 0.66,
-      "area": 8.3
-    },
-    {
-      "id": 11,
-      "pixelCount": 36,
-      "avgTemp": 52.89,
-      "minTemp": 52.47,
-      "maxTemp": 53.45,
-      "stdTemp": 0.28,
-      "area": 3.2
-    },
-    {
-      "id": 12,
-      "pixelCount": 25,
-      "avgTemp": 53.31,
-      "minTemp": 52.64,
-      "maxTemp": 54.25,
-      "stdTemp": 0.54,
-      "area": 2.2
-    },
-    {
-      "id": 13,
-      "pixelCount": 24,
-      "avgTemp": 52.71,
-      "minTemp": 52.46,
-      "maxTemp": 53.09,
-      "stdTemp": 0.17,
-      "area": 2.2
-    },
-    {
-      "id": 14,
-      "pixelCount": 33,
-      "avgTemp": 52.88,
-      "minTemp": 52.46,
-      "maxTemp": 53.45,
-      "stdTemp": 0.26,
-      "area": 3.0
-    },
-    {
-      "id": 15,
-      "pixelCount": 186,
-      "avgTemp": 53.87,
-      "minTemp": 52.49,
-      "maxTemp": 56.37,
-      "stdTemp": 0.91,
-      "area": 16.7
-    },
-    {
-      "id": 16,
       "pixelCount": 34,
       "avgTemp": 53.41,
       "minTemp": 52.53,
@@ -918,22 +288,13 @@
       "area": 3.1
     },
     {
-      "id": 17,
-      "pixelCount": 98,
+      "id": 6,
+      "pixelCount": 99,
       "avgTemp": 53.04,
-      "minTemp": 52.47,
+      "minTemp": 52.48,
       "maxTemp": 54.4,
       "stdTemp": 0.42,
-      "area": 8.8
-    },
-    {
-      "id": 18,
-      "pixelCount": 15,
-      "avgTemp": 52.92,
-      "minTemp": 52.51,
-      "maxTemp": 53.31,
-      "stdTemp": 0.26,
-      "area": 1.3
+      "area": 8.9
     }
   ]
 }

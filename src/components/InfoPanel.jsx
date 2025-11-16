@@ -98,16 +98,16 @@ const InfoPanel = ({ barangay, data, year, activeLayers, clusterData }) => {
             </div>
 
             <div className="cluster-list">
-              {[...clusterData.clusters].sort((a, b) => b.area - a.area).map((cluster) => (
+              {clusterData.clusters.map((cluster, index) => (
                 <div key={cluster.id} className="cluster-item">
                   <div
                     className="cluster-color-box"
                     style={{ backgroundColor: cluster.color.color }}
-                    title={`Cluster ${cluster.id} - ${cluster.color.name}`}
+                    title={`Rank ${index} - ${cluster.color.name} (${formatTemp(cluster.avgTemp)}°C)`}
                   ></div>
                   <div className="cluster-details">
                     <div className="cluster-header-info">
-                      <span className="cluster-id">Cluster {cluster.id}</span>
+                      <span className="cluster-id">Cluster {index}</span>
                       <span className="cluster-area">{cluster.area.toFixed(1)} ha</span>
                     </div>
                     <div className="cluster-stats">
