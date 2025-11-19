@@ -8,7 +8,6 @@ import Navigation from './components/Navigation';
 import AboutPage from './components/AboutPage';
 import InfoFAQPage from './components/InfoFAQPage';
 import FindingsPage from './components/FindingsPage';
-import ExportButton from './components/ExportButton';
 import { loadBarangayLSTData, getPopulationData } from './utils/dataLoader';
 import { getYearClusterData } from './utils/clusterDataLoader';
 import './App.css';
@@ -23,7 +22,6 @@ function App() {
   const [barangayLSTData, setBarangayLSTData] = useState({});
   const [clusterData, setClusterData] = useState(null);
   const mapRef = useRef(null);
-  const exportClickRef = useRef(null);
 
   // Load LST data when year changes
   useEffect(() => {
@@ -88,20 +86,13 @@ function App() {
 
   // Removed debug logging to prevent render overhead
 
-  const handleExportClick = () => {
-    if (exportClickRef.current) {
-      exportClickRef.current();
-    }
-  };
-
   return (
     <div className={`app-container ${currentPage === 'about' || currentPage === 'info' || currentPage === 'findings' ? 'scrollable' : ''}`}>
       {currentPage !== 'landing' && (
         <Navigation
           currentPage={currentPage}
           onPageChange={handlePageChange}
-          showExportButton={currentPage === 'map'}
-          onExportClick={handleExportClick}
+          showExportButton={false}
         />
       )}
 
@@ -139,7 +130,6 @@ function App() {
             selectedYear={selectedYear}
             onYearChange={handleYearChange}
           />
-          <ExportButton mapRef={mapRef} onExportClick={exportClickRef} />
         </>
       )}
 

@@ -142,6 +142,17 @@
 
 /* Keep centered regardless of layer panel */
 
+@media (max-width: 1024px) {
+  .year-selector-content {
+    padding: 12px 30px;
+  }
+
+  .year-button {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
   .year-selector-content {
     padding: 16px 20px;
@@ -158,5 +169,28 @@
 
   .year-selector-header h4 {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .year-selector-content {
+    padding: 14px 16px;
+  }
+
+  .year-timeline {
+    gap: 6px;
+  }
+
+  .year-button {
+    padding: 8px 8px;
+    font-size: 12px;
+  }
+
+  .year-label {
+    font-size: 12px;
+  }
+
+  .slider-labels {
+    font-size: 11px;
   }
 }

@@ -8,6 +8,8 @@
   padding: 24px;
   min-width: 320px;
   max-width: 380px;
+  max-height: calc(100vh - 270px); /* Leave space for navbar (70px) + top margin (20px) + year selector (~180px) */
+  overflow-y: auto;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   transition: all 0.3s ease;
@@ -138,7 +140,8 @@
 .cluster-summary {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  gap: 12px;
   margin-bottom: 16px;
   padding: 12px 16px;
   background: #f0f4f8;
@@ -147,8 +150,25 @@
 }
 
 .cluster-stat {
-  color: #546e7a;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+  flex: 1;
+}
+
+.cluster-stat-label {
+  color: #7f8c8d;
   font-weight: 500;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cluster-stat-value {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .cluster-list {
@@ -248,13 +268,64 @@
   font-weight: 600;
 }
 
+/* Scrollbar styling for InfoPanel */
+.info-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.info-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+.info-panel::-webkit-scrollbar-thumb {
+  background: rgba(16, 185, 129, 0.5);
+  border-radius: 10px;
+}
+
+.info-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.7);
+}
+
+/* Medium screens - tablets and small desktops */
+@media (max-width: 1280px) {
+  .info-panel {
+    right: 20px;
+    min-width: 300px;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .info-panel {
+    right: 15px;
+    min-width: 280px;
+    max-width: 320px;
+    padding: 20px;
+  }
+
+  .info-content h3 {
+    font-size: 22px;
+  }
+
+  .stat-value {
+    font-size: 20px;
+  }
+
+  .cluster-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 @media (max-width: 768px) {
   .info-panel {
     top: 80px; /* 60px nav bar (mobile) + 20px margin */
     right: 10px;
-    min-width: 280px;
+    min-width: 260px;
     max-width: calc(100vw - 20px);
-    padding: 20px;
+    padding: 18px;
   }
 
   .info-content h3 {
@@ -270,9 +341,17 @@
   }
 
   .cluster-summary {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 6px;
+    gap: 8px;
+  }
+
+  .cluster-stat-value {
+    font-size: 15px;
+  }
+
+  .cluster-stat-label {
+    font-size: 10px;
   }
 
   .cluster-item {
@@ -287,5 +366,43 @@
 
   .cluster-stats {
     align-items: flex-start;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .info-panel {
+    right: 8px;
+    left: 8px;
+    min-width: auto;
+    max-width: calc(100vw - 16px);
+    padding: 16px;
+  }
+
+  .info-content h3 {
+    font-size: 18px;
+  }
+
+  .stat-icon {
+    font-size: 28px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .cluster-header h4 {
+    font-size: 15px;
+  }
+
+  .cluster-summary {
+    font-size: 12px;
+    padding: 10px 12px;
   }
 }

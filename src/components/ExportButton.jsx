@@ -10,7 +10,9 @@ const ExportButton = ({ mapRef, onExportClick }) => {
     setIsSelecting(true);
     setSelectionStart(null);
     setSelectionEnd(null);
-    if (onExportClick) onExportClick();
+    if (onExportClick && typeof onExportClick === 'function') {
+      onExportClick();
+    }
   };
 
   const handleCancel = () => {
@@ -71,19 +73,61 @@ const ExportButton = ({ mapRef, onExportClick }) => {
 
     try {
       const map = mapRef.current;
+
+      console.log('Starting export...');
+
+      // Wait a moment for any rendering to finish
+      await new Promise(resolve => setTimeout(resolve, 300));
+
+      // Create an image from the current canvas state
       const canvas = map.getCanvas();
 
-      // Create a temporary canvas for the selected area
+      // Get the full canvas as a data URL immediately
+      let dataURL;
+      try {
+        dataURL = canvas.toDataURL('image/png');
+        console.log('Got canvas data URL, length:', dataURL.length);
+      } catch (e) {
+        console.error('Failed to get canvas data:', e);
+        alert('Cannot export: WebGL canvas is not readable. Try refreshing the page.');
+        return;
+      }
+
+      // Create an image element to load the full canvas
+      const img = new Image();
+
+      await new Promise((resolve, reject) => {
+        img.onload = resolve;
+        img.onerror = reject;
+        img.src = dataURL;
+      });
+
+      console.log('Image loaded, size:', img.width, 'x', img.height);
+
+      // Now create the cropped canvas
       const exportCanvas = document.createElement('canvas');
       exportCanvas.width = width;
       exportCanvas.height = height;
+
       const ctx = exportCanvas.getContext('2d');
 
-      // Draw the selected portion of the map
-      ctx.drawImage(canvas, x, y, width, height, 0, 0, width, height);
+      // Draw the selected portion
+      ctx.drawImage(
+        img,
+        x, y, width, height,  // source rectangle
+        0, 0, width, height   // destination rectangle
+      );
+
+      console.log('Created export canvas:', exportCanvas.width, 'x', exportCanvas.height);
 
       // Convert to blob and download
       exportCanvas.toBlob((blob) => {
+        if (!blob) {
+          console.error('Failed to create blob');
+          alert('Failed to create image file');
+          return;
+        }
+
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
@@ -91,11 +135,13 @@ const ExportButton = ({ mapRef, onExportClick }) => {
         link.href = url;
         link.click();
         URL.revokeObjectURL(url);
+
+        console.log('✅ Map exported successfully!');
       }, 'image/png');
 
-      console.log('✅ Map area exported successfully');
     } catch (error) {
-      console.error('❌ Error exporting map:', error);
+      console.error('Export error:', error);
+      alert('Failed to export map: ' + error.message);
     }
   };
 
@@ -134,18 +180,16 @@ const ExportButton = ({ mapRef, onExportClick }) => {
             {selectionStart && selectionEnd && (
               <div className="export-selection" style={getSelectionStyle()}></div>
             )}
+          </div>
 
+          {!selectionStart && (
             <div className="export-instructions">
-              <p>
-                {!selectionStart
-                  ? 'Draw a rectangle to select the area to export'
-                  : 'Release to capture the selected area'}
-              </p>
+              <p>Draw a rectangle to select the area to export</p>
               <button className="export-cancel-btn" onClick={handleCancel}>
                 Cancel
               </button>
             </div>
-          </div>
+          )}
         </>
       )}
     </>

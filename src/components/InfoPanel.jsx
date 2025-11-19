@@ -2,6 +2,9 @@ import './InfoPanel.css';
 import { getClusterColor } from '../utils/clusterDataLoader';
 
 const InfoPanel = ({ barangay, data, year, activeLayers, clusterData }) => {
+  // Total pixels in Valenzuela City
+  const VALENZUELA_TOTAL_PIXELS = 122578;
+
   // Show DBSCAN clusters when active, regardless of barangay selection
   const showDBSCANClusters = activeLayers?.includes('dbscan') && clusterData && clusterData.clusters && clusterData.clusters.length > 0;
 
@@ -25,6 +28,12 @@ const InfoPanel = ({ barangay, data, year, activeLayers, clusterData }) => {
   const formatTempRange = (temp) => {
     if (temp === null || temp === undefined || isNaN(temp)) return 'N/A';
     return Number(temp).toFixed(1);
+  };
+
+  // Calculate percentage of Valenzuela City area
+  const calculateAreaPercentage = (pixelCount) => {
+    if (!pixelCount || pixelCount === 0) return '0.00';
+    return ((pixelCount / VALENZUELA_TOTAL_PIXELS) * 100).toFixed(2);
   };
 
   return (
@@ -86,19 +95,28 @@ const InfoPanel = ({ barangay, data, year, activeLayers, clusterData }) => {
           <div className="cluster-info">
             <div className="cluster-header">
               <div className="stat-icon cluster-icon">🎯</div>
-              <h4>DBSCAN Clusters {year} ({clusterData.clusterCount})</h4>
+              <h4>DBSCAN Clusters {year}</h4>
             </div>
 
             <div className="cluster-summary">
-              <span className="cluster-stat">Total Area: {clusterData.totalArea.toFixed(1)} ha</span>
-              <span className="cluster-stat">Total Pixels: {clusterData.totalPixels.toLocaleString()}</span>
+              <div className="cluster-stat">
+                <span className="cluster-stat-label">Total Area</span>
+                <span className="cluster-stat-value">{clusterData.totalArea.toFixed(1)} ha</span>
+              </div>
+              <div className="cluster-stat">
+                <span className="cluster-stat-label">Coverage</span>
+                <span className="cluster-stat-value">{calculateAreaPercentage(clusterData.totalPixels)}%</span>
+              </div>
               {clusterData.avgTemp && (
-                <span className="cluster-stat">City Avg: {formatTemp(clusterData.avgTemp)}°C</span>
+                <div className="cluster-stat">
+                  <span className="cluster-stat-label">City Avg</span>
+                  <span className="cluster-stat-value">{formatTemp(clusterData.avgTemp)}°C</span>
+                </div>
               )}
             </div>
 
             <div className="cluster-list">
-              {clusterData.clusters.map((cluster, index) => (
+              {clusterData.clusters.filter(cluster => cluster.avgTemp <= 60).map((cluster, index) => (
                 <div key={cluster.id} className="cluster-item">
                   <div
                     className="cluster-color-box"
@@ -111,7 +129,7 @@ const InfoPanel = ({ barangay, data, year, activeLayers, clusterData }) => {
                       <span className="cluster-area">{cluster.area.toFixed(1)} ha</span>
                     </div>
                     <div className="cluster-stats">
-                      <span className="cluster-pixels">{cluster.pixelCount.toLocaleString()} px</span>
+                      <span className="cluster-pixels">{calculateAreaPercentage(cluster.pixelCount)}% of city</span>
                       <span className="cluster-temp">{formatTemp(cluster.avgTemp)}°C</span>
                     </div>
                   </div>

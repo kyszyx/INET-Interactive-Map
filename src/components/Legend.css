@@ -1,15 +1,15 @@
 .legend-container {
   position: fixed;
-  top: auto;
-  bottom: 175px; /* Above year selector with more clearance */
+  top: 90px; /* Below navbar, aligned with InfoPanel */
+  bottom: auto;
   left: auto;
-  right: 20px;
+  right: 425px; /* Position to the left of InfoPanel (380px width + 45px gap) */
   background: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   padding: 12px;
   width: 320px;
-  max-height: 300px;
+  max-height: calc(100vh - 270px); /* Account for navbar and year selector */
   overflow-y: auto;
   z-index: 999;
   transition: all 0.3s ease;
@@ -115,11 +115,66 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1440px) {
+  .legend-container {
+    right: 385px; /* Adjust for smaller screens */
+    width: 280px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .legend-container {
+    right: 365px;
+    width: 260px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .legend-container {
+    /* Move to bottom on smaller screens */
+    top: auto;
+    bottom: 175px;
+    left: 20px;
+    right: auto;
+    width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .legend-container {
     bottom: 140px;
-    right: 10px;
+    left: 10px;
     width: 280px;
+  }
+
+  .legend-label {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .legend-container {
+    bottom: 130px;
+    left: 8px;
+    right: 8px;
+    width: auto;
+    max-width: calc(100vw - 16px);
+  }
+
+  .legend-header h3 {
+    font-size: 14px;
+  }
+
+  .legend-name {
+    font-size: 13px;
+  }
+
+  .legend-full-name {
+    font-size: 10px;
+  }
+
+  .legend-gradient {
+    height: 18px;
   }
 
   .legend-label {

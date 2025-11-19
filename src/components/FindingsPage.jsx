@@ -1,12 +1,35 @@
 import { useState, useEffect } from 'react';
 import './FindingsPage.css';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+import { Line, Bar } from 'react-chartjs-2';
+
+// Register Chart.js components
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 const FindingsPage = () => {
   const [suhiData, setSuhiData] = useState([]);
   const [moransData, setMoransData] = useState([]);
   const [getisData, setGetisData] = useState([]);
   const [clusterData, setClusterData] = useState([]);
-  const [lightboxImage, setLightboxImage] = useState(null);
 
   useEffect(() => {
     // Load SUHI data
@@ -243,27 +266,147 @@ const FindingsPage = () => {
           </div>
         </section>
 
-        {/* Visual Results */}
+        {/* Visual Results - Dynamic Charts */}
         <section className="findings-section">
           <h2>Analysis Results</h2>
           <p className="explanation">
-            Detailed tables showing validation metrics, spatial clustering patterns, and cluster statistics.
+            Interactive visualizations of SUHI trends, spatial autocorrelation patterns, and hotspot validation metrics across all study years.
           </p>
 
-          <div className="image-grid">
-            <div className="image-card" onClick={() => setLightboxImage('/1.png')}>
-              <img src="/1.png" alt="Getis-Ord Gi* Validation Table" />
-              <p className="image-caption">Getis-Ord Gi* hotspot validation and agreement with DBSCAN clusters</p>
+          <div className="charts-grid-three">
+            {/* SUHI Trend Chart */}
+            <div className="chart-card">
+              <h3>SUHI Intensity Trend (2020-2025)</h3>
+              {suhiData.length > 0 && (
+                <Line
+                  data={{
+                    labels: suhiData.map(d => d.year),
+                    datasets: [
+                      {
+                        label: 'City Average (°C)',
+                        data: suhiData.map(d => parseFloat(d.cityMean)),
+                        borderColor: 'rgb(255, 99, 132)',
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        tension: 0.1
+                      },
+                      {
+                        label: 'Rural Average (°C)',
+                        data: suhiData.map(d => parseFloat(d.ruralMean)),
+                        borderColor: 'rgb(75, 192, 192)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0.1
+                      },
+                      {
+                        label: 'SUHI Citywide (°C)',
+                        data: suhiData.map(d => parseFloat(d.suhiCitywide)),
+                        borderColor: 'rgb(255, 159, 64)',
+                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                        tension: 0.1
+                      }
+                    ]
+                  }}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: { position: 'top' },
+                      title: { display: false }
+                    },
+                    scales: {
+                      y: {
+                        beginAtZero: false,
+                        title: { display: true, text: 'Temperature (°C)' }
+                      }
+                    }
+                  }}
+                />
+              )}
             </div>
 
-            <div className="image-card" onClick={() => setLightboxImage('/2.png')}>
-              <img src="/2.png" alt="Moran's I Statistics Table" />
-              <p className="image-caption">Moran's I spatial autocorrelation analysis showing clustering strength</p>
+            {/* Moran's I Chart */}
+            <div className="chart-card">
+              <h3>Spatial Clustering Strength (Moran's I)</h3>
+              {moransData.length > 0 && (
+                <Line
+                  data={{
+                    labels: moransData.map(d => d.year),
+                    datasets: [
+                      {
+                        label: 'Average Moran\'s I',
+                        data: moransData.map(d => parseFloat(d.avgMoransI)),
+                        borderColor: 'rgb(54, 162, 235)',
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        tension: 0.1
+                      },
+                      {
+                        label: 'Max Moran\'s I',
+                        data: moransData.map(d => parseFloat(d.maxMoransI)),
+                        borderColor: 'rgb(153, 102, 255)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        tension: 0.1
+                      }
+                    ]
+                  }}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: { position: 'top' },
+                      title: { display: false }
+                    },
+                    scales: {
+                      y: {
+                        beginAtZero: false,
+                        max: 1.0,
+                        title: { display: true, text: 'Moran\'s I Value' }
+                      }
+                    }
+                  }}
+                />
+              )}
             </div>
 
-            <div className="image-card" onClick={() => setLightboxImage('/3.png')}>
-              <img src="/3.png" alt="DBSCAN Cluster Results Table" />
-              <p className="image-caption">DBSCAN clustering results with cluster size and noise statistics</p>
+            {/* Getis-Ord Gi* Validation Chart */}
+            <div className="chart-card">
+              <h3>Hotspot Detection Agreement (%)</h3>
+              {getisData.length > 0 && (
+                <Bar
+                  data={{
+                    labels: getisData.map(d => d.year),
+                    datasets: [
+                      {
+                        label: 'Gi* Agreement',
+                        data: getisData.map(d => parseFloat(d.giOverlap)),
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgb(75, 192, 192)',
+                        borderWidth: 1
+                      },
+                      {
+                        label: 'DBSCAN Agreement',
+                        data: getisData.map(d => parseFloat(d.dbscanOverlap)),
+                        backgroundColor: 'rgba(255, 159, 64, 0.6)',
+                        borderColor: 'rgb(255, 159, 64)',
+                        borderWidth: 1
+                      }
+                    ]
+                  }}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: { position: 'top' },
+                      title: { display: false }
+                    },
+                    scales: {
+                      y: {
+                        beginAtZero: true,
+                        max: 100,
+                        title: { display: true, text: 'Agreement (%)' }
+                      }
+                    }
+                  }}
+                />
+              )}
             </div>
           </div>
         </section>
@@ -294,16 +437,6 @@ const FindingsPage = () => {
           </p>
         </section>
       </div>
-
-      {/* Lightbox Modal */}
-      {lightboxImage && (
-        <div className="lightbox-overlay" onClick={() => setLightboxImage(null)}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <button className="lightbox-close" onClick={() => setLightboxImage(null)}>×</button>
-            <img src={lightboxImage} alt="Enlarged view" />
-          </div>
-        </div>
-      )}
     </div>
   );
 };

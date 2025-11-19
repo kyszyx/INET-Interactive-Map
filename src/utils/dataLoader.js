@@ -88,7 +88,7 @@ const population2020 = {
   "Rincon": 6940,
   "Tagalag": 3400,
   "Ugong": 55494,
-  "Viente Reales": 24399,
+  "Veinte Reales": 24399,
   "Wawang Pulo": 4070
 };
 
@@ -125,7 +125,7 @@ const population2024 = {
   "Rincon": 7097,
   "Tagalag": 3468,
   "Ugong": 56202,
-  "Viente Reales": 18874,
+  "Veinte Reales": 18874,
   "Wawang Pulo": 4198
 };
 
