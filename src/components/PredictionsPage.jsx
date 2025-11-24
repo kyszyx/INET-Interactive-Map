@@ -345,10 +345,38 @@ const PredictionsPage = () => {
           </section>
 
           <section className="prediction-section">
-            <h2>Model Performance Metrics</h2>
-            <div className="chart-placeholder">
-              <p>Model Accuracy and Performance Statistics</p>
-              <p className="placeholder-note">Metrics will be added here</p>
+            <h2>Prediction Algorithm: Prophet</h2>
+            <div className="algorithm-description">
+              <p className="algorithm-intro">
+                <strong>Facebook Prophet</strong> is an open-source forecasting tool designed for time series data with strong seasonal patterns and multiple years of historical data. It works particularly well with data that has missing values and outliers, making it ideal for temperature prediction.
+              </p>
+
+              <div className="algorithm-details">
+                <h3>Conservative Forecasting Approach</h3>
+                <p>
+                  This study implements a <strong>conservative forecasting strategy</strong> to ensure reliable predictions with minimal overfitting:
+                </p>
+
+                <div className="code-example">
+                  <pre><code>model = Prophet(changepoint_prior_scale=0.05, interval_width=0.95)</code></pre>
+                </div>
+
+                <div className="parameter-explanation">
+                  <div className="parameter-item">
+                    <strong>changepoint_prior_scale=0.05:</strong>
+                    <p>This low value makes the model less sensitive to trend changes, producing smoother and more stable long-term forecasts. It prevents the model from overfitting to short-term fluctuations in historical data.</p>
+                  </div>
+
+                  <div className="parameter-item">
+                    <strong>interval_width=0.95:</strong>
+                    <p>Generates 95% confidence intervals around predictions, showing the range of plausible future temperatures. The shaded areas in the charts above represent this uncertainty range.</p>
+                  </div>
+                </div>
+
+                <div className="methodology-note">
+                  <strong>Why Conservative?</strong> Given the complexity of urban climate systems and the limited historical data (2020-2025), a conservative approach provides more reliable predictions by avoiding overconfident extrapolations into the future.
+                </div>
+              </div>
             </div>
           </section>
         </div>
