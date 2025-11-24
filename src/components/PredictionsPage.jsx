@@ -375,7 +375,7 @@ const PredictionsPage = () => {
                 </div>
 
                 <div className="methodology-note">
-                  <strong>Why Conservative?</strong> Given the complexity of urban climate systems and the limited historical data (2020-2025), a conservative approach provides more reliable predictions by avoiding overconfident extrapolations into the future.
+                  <strong>Why Conservative?</strong> Multiple forecasting methods were compared to determine the optimal approach. Method 3 (Conservative Trend with changepoint_prior_scale=0.05) was selected because it produced the most realistic predictions with narrower confidence intervals (±2.4°C) compared to other methods that showed unrealistic temperature spikes and extremely wide uncertainty ranges (±20-33°C). The conservative approach prevents the model from overfitting to the sharp 2024-2025 temperature increase, providing stable and scientifically plausible long-term forecasts. This is crucial given the limited 5-year historical data and the complexity of urban climate systems.
                 </div>
               </div>
             </div>
