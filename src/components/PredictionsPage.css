@@ -169,6 +169,11 @@
   margin: 0;
 }
 
+.parameter-item .why-note {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
 .methodology-note {
   background: #e7f7ef;
   padding: 20px;

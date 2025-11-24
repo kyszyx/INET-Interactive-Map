@@ -348,7 +348,7 @@ const PredictionsPage = () => {
             <h2>Prediction Algorithm: Prophet</h2>
             <div className="algorithm-description">
               <p className="algorithm-intro">
-                <strong>Facebook Prophet</strong> is an open-source forecasting tool designed for time series data with strong seasonal patterns and multiple years of historical data. It works particularly well with data that has missing values and outliers, making it ideal for temperature prediction.
+                <strong>Prophet from Meta</strong> is an open-source forecasting tool designed for time series data with strong seasonal patterns and multiple years of historical data. It works particularly well with data that has missing values and outliers, making it ideal for temperature prediction.
               </p>
 
               <div className="algorithm-details">
@@ -369,7 +369,8 @@ const PredictionsPage = () => {
 
                   <div className="parameter-item">
                     <strong>interval_width=0.95:</strong>
-                    <p>Generates 95% confidence intervals around predictions, showing the range of plausible future temperatures. The shaded areas in the charts above represent this uncertainty range.</p>
+                    <p>Generates 95% confidence intervals (CI) around predictions. A confidence interval is a statistical range that indicates where the true value is likely to fall. The 95% CI means we can be 95% confident that actual future temperatures will fall within the shaded areas shown in the charts.</p>
+                    <p className="why-note">Why 95% instead of default 50%? While Prophet's default is 50%, using 95% provides a wider, more realistic uncertainty range. This is crucial for climate forecasting where many unpredictable factors can affect outcomes. A 95% CI gives stakeholders and policymakers a more complete picture of potential temperature scenarios rather than an overly optimistic narrow range.</p>
                   </div>
                 </div>
 
