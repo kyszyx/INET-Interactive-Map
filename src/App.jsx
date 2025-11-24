@@ -8,12 +8,13 @@ import Navigation from './components/Navigation';
 import AboutPage from './components/AboutPage';
 import InfoFAQPage from './components/InfoFAQPage';
 import FindingsPage from './components/FindingsPage';
+import PredictionsPage from './components/PredictionsPage';
 import { loadBarangayLSTData, getPopulationData } from './utils/dataLoader';
 import { getYearClusterData } from './utils/clusterDataLoader';
 import './App.css';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('landing'); // 'landing', 'map', 'about', 'info', 'findings'
+  const [currentPage, setCurrentPage] = useState('landing'); // 'landing', 'map', 'predictions', 'about', 'info', 'findings'
   const [showMap, setShowMap] = useState(false);
   const [dragOffset, setDragOffset] = useState(0);
   const [selectedYear, setSelectedYear] = useState(2025);
@@ -87,7 +88,7 @@ function App() {
   // Removed debug logging to prevent render overhead
 
   return (
-    <div className={`app-container ${currentPage === 'about' || currentPage === 'info' || currentPage === 'findings' ? 'scrollable' : ''}`}>
+    <div className={`app-container ${currentPage === 'about' || currentPage === 'info' || currentPage === 'findings' || currentPage === 'predictions' ? 'scrollable' : ''}`}>
       {currentPage !== 'landing' && (
         <Navigation
           currentPage={currentPage}
@@ -138,6 +139,8 @@ function App() {
       {currentPage === 'info' && <InfoFAQPage />}
 
       {currentPage === 'findings' && <FindingsPage />}
+
+      {currentPage === 'predictions' && <PredictionsPage />}
     </div>
   );
 }

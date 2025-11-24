@@ -15,6 +15,12 @@ const Navigation = ({ currentPage, onPageChange, showExportButton, onExportClick
           Map
         </button>
         <button
+          className={`nav-link ${currentPage === 'predictions' ? 'active' : ''}`}
+          onClick={() => onPageChange('predictions')}
+        >
+          Predictions
+        </button>
+        <button
           className={`nav-link ${currentPage === 'info' ? 'active' : ''}`}
           onClick={() => onPageChange('info')}
         >
