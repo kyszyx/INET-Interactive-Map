@@ -32,7 +32,9 @@ const PredictionsPage = () => {
       .then(res => res.text())
       .then(csv => {
         const lines = csv.trim().split('\n').slice(1);
-        const data = lines.map(line => {
+        const data = lines
+          .filter(line => !line.startsWith('2023,')) // Exclude 2023 data
+          .map(line => {
           const values = line.split(',');
 
           // Parse CI values (format: "±2.44" or "�2.44")
@@ -204,7 +206,7 @@ const PredictionsPage = () => {
                       },
                       title: {
                         display: true,
-                        text: 'Historical Data (2020-2025) & Predictions (2026-2030) with 95% CI',
+                        text: 'Historical Data (2021-2022, 2024-2025) & Predictions (2026-2030) with 95% CI',
                         font: { size: 16, weight: 'bold' }
                       },
                       tooltip: {
